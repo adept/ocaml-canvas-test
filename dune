@@ -1,0 +1,9 @@
+(executable
+ (name canvas)
+ (modes js)
+ (libraries core_kernel js_of_ocaml-lwt graphics js_of_ocaml-lwt.graphics lwt)
+ (preprocess (pps ppx_jane js_of_ocaml-ppx)))
+
+(alias
+  (name default)
+  (deps canvas.bc.js index.html))
